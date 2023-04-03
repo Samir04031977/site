@@ -1,4 +1,4 @@
 FROM nginx
 WORKDIR /app
-COPY . .
+COPY . /usr/share/nginx/html
 
