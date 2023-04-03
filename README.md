@@ -11,14 +11,12 @@
     git add .
     git commit -m "init project"
     git push -u origin main
-4- dockeriser l'appli
+4- Construire l'image
     docker build -t samir1977/site .
-5- Copier l'image vers Dockerhub
+5- Pousser l'image vers Dockerhub
     docker push samir1977/site
 6- Deployer l'appli
     kubectl create deployment site-deployment --image samir1977/site
     kubectl expose deployment/site1-deployment --type LoadBalancer --port 80
     minikube service site-deployment
     kubectl scale deployment/site-deployment --replicas 6
-
-
